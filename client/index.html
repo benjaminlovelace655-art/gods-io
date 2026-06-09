@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Gods.io — Ascend or Be Forgotten</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="game-wrapper">
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="hud-top">
+      <div id="player-info">
+        <div id="hp-bar-container">
+          <div id="hp-label">HP</div>
+          <div id="hp-bar"><div id="hp-fill"></div></div>
+          <span id="hp-text">100/100</span>
+        </div>
+        <div id="mp-bar-container">
+          <div id="mp-label">MP</div>
+          <div id="mp-bar"><div id="mp-fill"></div></div>
+          <span id="mp-text">100/100</span>
+        </div>
+        <div id="xp-bar-container">
+          <div id="xp-label">XP</div>
+          <div id="xp-bar"><div id="xp-fill"></div></div>
+          <span id="xp-text">0/100</span>
+        </div>
+      </div>
+      <div id="level-rank">
+        <span id="level-display">Lv.1</span>
+        <span id="rank-display">Mortal</span>
+      </div>
+      <div id="top-right">
+        <div id="kill-display">Kills: 0</div>
+        <div id="power-display">🔥 Fire</div>
+      </div>
+    </div>
+
+    <div id="abilities-bar">
+      <div class="ability-slot" id="ability-primary" title="Left Click">
+        <div class="ability-key">Q</div>
+        <div class="ability-name">Fireball</div>
+        <div class="ability-cooldown-overlay"></div>
+      </div>
+      <div class="ability-slot" id="ability-secondary" title="Right Click">
+        <div class="ability-key">E</div>
+        <div class="ability-name">Inferno</div>
+        <div class="ability-cooldown-overlay"></div>
+      </div>
+      <div class="ability-slot" id="ability-ultimate" title="R">
+        <div class="ability-key">R</div>
+        <div class="ability-name">Meteor Storm</div>
+        <div class="ability-cooldown-overlay"></div>
+      </div>
+      <div class="ability-slot" id="ability-summon" title="F">
+        <div class="ability-key">F</div>
+        <div class="ability-name">Summon</div>
+      </div>
+    </div>
+
+    <div id="chat-container">
+      <div id="chat-messages"></div>
+      <div id="chat-input-area" style="display:none">
+        <input type="text" id="chat-input" maxlength="200" placeholder="Type a message..." />
+      </div>
+    </div>
+
+    <div id="leaderboard">
+      <div id="lb-title">Leaderboard</div>
+      <div id="lb-entries"></div>
+    </div>
+
+    <div id="minimap"></div>
+
+    <div id="death-screen" style="display:none">
+      <h2>You Died</h2>
+      <p>Respawning in <span id="respawn-timer">5</span>s</p>
+    </div>
+
+    <div id="join-screen">
+      <div id="join-box">
+        <h1>Gods.io</h1>
+        <p class="subtitle">From Mortal to Creator — Ascend or Be Forgotten</p>
+        <input type="text" id="name-input" placeholder="Enter your name..." maxlength="20" />
+        <button id="join-btn">Enter the Realm</button>
+        <div class="controls-hint">
+          <p>WASD: Move | Mouse: Aim | Click: Attack</p>
+          <p>Q/E/R: Abilities | F: Summon | Enter: Chat</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="biome-label"></div>
+  </div>
+
+  <script src="/js/network.js"></script>
+  <script src="/js/input.js"></script>
+  <script src="/js/renderer.js"></script>
+  <script src="/js/ui.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
