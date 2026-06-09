@@ -24,7 +24,7 @@ function getServerUrl() {
   if (host === 'localhost' || host === '127.0.0.1') {
     return `ws://${host}:${window.location.port || 3000}`;
   }
-  return `wss://gods-io-server.onrender.com`;
+  return `wss://f6f2815d330241.lhr.life`;
 }
 
 let serverUrl = getServerUrl();
